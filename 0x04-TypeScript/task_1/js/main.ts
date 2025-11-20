@@ -9,12 +9,12 @@ interface Teacher {
 }
 
 // Extend the Teacher interface with Directors
-interface Directors extends Teacher {
+interface Director extends Teacher {
     numberOfReports: number;
 }
 
 // Example usage
-const director1: Directors = {
+const director1: Director = {
     firstName: 'John',
     lastName: 'Doe',
     location: 'London',
