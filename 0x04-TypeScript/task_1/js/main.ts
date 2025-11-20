@@ -58,7 +58,7 @@ export class StudentClass {
   }
 
   displayName(): string {
-    return this.firstName;
+    return `${this.firstName}. ${this.lastName}`;
   }
 }
 
