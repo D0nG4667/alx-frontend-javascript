@@ -1,7 +1,7 @@
 namespace Subjects {
   // ✅ Interface Subject with setTeacher signature
   export interface Subject {
-    setTeacher(teacher: Teacher): void;
+    setTeacher(teacher:Teacher) : void;
   }
 
   // ✅ Class Subject implements the interface
