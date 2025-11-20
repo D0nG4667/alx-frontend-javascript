@@ -4,10 +4,7 @@ import type { RowID, RowElement } from './interface';
 import * as CRUD from './crud';
 
 // create a row with the RowElement type
-const row: RowElement = {
-  firstName: 'Guillaume',
-  lastName: 'Salva',
-};
+const row: RowElement = { firstName: 'Guillaume', lastName: 'Salva' };
 
 // insert the row and capture the returned RowID
 const newRowID: RowID = CRUD.insertRow(row);
