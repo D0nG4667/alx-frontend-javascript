@@ -36,7 +36,7 @@ export function printTeacher({ firstName, lastName }: { firstName: string; lastN
 }
 
 // Example usage
-// console.log(printTeacher("John", "Doe")); // Output: J. Doe
+// console.log(printTeacher("John", "Doe")); // Output: John. Doe
 
 // Interface describing constructor
 export interface StudentClassConstructor {
@@ -50,7 +50,7 @@ export interface StudentClassInterface {
 }
 
 // Class implementation
-export class StudentClass implements StudentClassInterface {
+export class StudentClass {
   constructor(public firstName: string, public lastName: string) {}
 
   workOnHomework(): string {
@@ -58,7 +58,7 @@ export class StudentClass implements StudentClassInterface {
   }
 
   displayName(): string {
-    return this.firstName;
+    return this.lastName;
   }
 }
 
