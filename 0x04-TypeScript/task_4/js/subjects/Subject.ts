@@ -1,3 +1,5 @@
+/// <reference path="Teacher.ts" />
+
 namespace Subjects {
   // ✅ Interface Subject with setTeacher signature
   export interface Subject {
