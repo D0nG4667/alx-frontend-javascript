@@ -44,17 +44,20 @@ class Teacher implements TeacherInterface {
 
 // createEmployee function: returns Director or Teacher based on salary
 function createEmployee(salary: number | string): Director | Teacher {
-    if (typeof salary === "number" && salary < 500) {
-        return new Teacher();
+    // Type guard ensures only numbers trigger Teacher
+    if (typeof salary === "number") {    
+        if (salary < 500) {
+            return new Teacher();
     }
-    // If salary is a string OR a number >= 500, return Director
-    return new Director();
+  }
+  // If salary is a string OR a number >= 500, return Director
+  return new Director();
 }
 
 /* Example usage / expected output */
-console.log(createEmployee(200).constructor.name);   // Teacher
-console.log(createEmployee(1000).constructor.name);  // Director
-console.log(createEmployee("$500").constructor.name); // Director
+console.log(createEmployee(200).constructor);   // Teacher
+console.log(createEmployee(1000).constructor);  // Director
+console.log(createEmployee("$500").constructor); // Director
 
 // Creating functions specific to employees
 // Type predicate to check if employee is a Director
