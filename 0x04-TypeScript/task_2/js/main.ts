@@ -86,7 +86,7 @@ console.log(executeWork(createEmployee(1000)));  // Getting to director tasks
 type Subjects = "Math" | "History";
 
 // Function to teach class based on subject
-function teachClass(todayClass: Subjects): string {
+function teachClass(todayClass:Subjects): string {
     if (todayClass === "Math") return "Teaching Math";
     return "Teaching History";
 }
