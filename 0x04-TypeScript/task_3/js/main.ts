@@ -13,7 +13,7 @@ const row: RowElement = {
 const newRowID: RowID = CRUD.insertRow(row);
 
 // create an updated row object with age
-export const updatedRow: RowElement = {...row,  age: 23,};
+export const updatedRow: RowElement = { ...row,  age: 23 };
 
 // update the row in the (mock) DB
 CRUD.updateRow(newRowID, updatedRow);
