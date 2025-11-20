@@ -25,14 +25,15 @@ const director1: Director = {
 // console.log(director1);
 
 // Define the function interface
+// Function type alias
 export interface printTeacherFunction {
-    (firstName: string, lastName: string): string;
+  (teacher: { firstName: string; lastName: string }): string;
 }
 
-// Implement the function
-export function printTeacher(firstName: string, lastName: string): string {
-    return `${firstName.charAt(0)}. ${lastName}`;
-};
+// Function declaration with destructuring
+export function printTeacher({ firstName, lastName }: { firstName: string; lastName: string }): string {
+  return `${firstName.charAt(0)}. ${lastName}`;
+}
 
 // Example usage
 // console.log(printTeacher("John", "Doe")); // Output: J. Doe
